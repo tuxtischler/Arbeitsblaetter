@@ -1,0 +1,108 @@
+\documentclass[a4paper, 12pt]{article}
+
+\def \patha {} %Pfad zu den Dateien Preamble.tex, Commands.tex, Erwartungsbild.tex
+
+\input{\patha/Preamble.tex}
+
+\onehalfspacing
+
+\newcommand{\KopfzeileBlank}{true}
+\newcommand{\FACH}{Informatik}
+\newcommand{\KLASSE}{5}
+\newcommand{\DATUM}{XX.YY.ZZZZ}
+%% Über den jeweiligen Typ wird bei Klassenarbeit und Leistungskontrolle das Erwartungsbild und der Notenspiegel als anhängende Seite kompiliert. Der Befehl \aufgabe besitzt beim Typ Arbeitsblatt einen Parameter für die Aufgabenstellung. Bei den Typen Klassenarbeit und Leistungskontrolle kommen noch zwei weitere Parameter für die Punktzahl und das Erwartungsbild hinzu.
+\newcommand{\TYP}{Arbeitsblatt}
+%\newcommand{\TYP}{Klassenarbeit}
+%\newcommand{\TYP}{Leistungskontrolle}
+\newcommand{\EINHEIT}{Bilder und Grafiken gestalten}
+\newcommand{\THEMA}{Farbdarstellung}
+\newcommand{\LEHRER}{N.N.}
+\newcommand{\TIME}{Zeit}
+\newcommand{\NTA}{Hier ist Platz für Nachteilsausgleiche!}
+%% Dieser "Switch" bewirkt, dass für Lückentexte die Lösung angezeigt oder ausgeblendet wird. Aktuell werden die Lücken jedoch noch nicht berücksichtigt. Vielleicht gibt es auch eine bessere Lösung für diesen "Switch"...
+%\newcommand{\LOSUNG}{true}
+\newcommand{\LOSUNG}{false}
+
+%\input{%Pfad zur Datei "Commands.tex%}
+\input{\patha/Commands.tex}
+
+\begin{document}
+
+\large
+\TITEL
+
+\begin{LKtext}
+	\aufgabe{Sieh dir das Video an und fülle die Lücken aus.}
+	Ein Bild besteht aus mehreren \lk{Pixeln}. Das Wort "Pixel" kommt aus dem Englischen und ist eine Abkürzung für "Picture Element". Das Wort Pixel heißt auf deutsch  "\lk{Bildelement}". Die Pixel sind in einem \lk{Raster} angeordnet. Je mehr Pixel ein Bild hat, desto \lk{schärfer} ist das Bild. Mit mehr Pixeln werden auf der \lk{gleichen} Fläche mehr \lk{Details} sichtbar. Die Kamera eines modernen \lk{Smartphones} erstellt Bilder mit mehr als \lk{12} \lk{Millionen} Bildpunkten.
+	
+	Die \lk{Pixel} sind nicht immer \lk{gleich} groß. Auf verschiedenen \lk{Geräten} können Pixel \lk{unterschiedlich} groß sein. Die Anzahl der Pixel auf einem Bildschirm nennt man auch \lk{Auflösung}. 
+	
+	Große Plakate haben häufig wesentlich \lk{mehr} Pixel als Bilder aus dem eigenen Drucker. Gleichzeitig werden Plakate meistens aus \lk{großer} Entfernung betrachtet.
+	
+	Eine weitere Möglichkeit sind \lk{Vektorgrafiken}. Diese bestehen nicht aus einem \lk{Pixelraster}, sondern aus einer \lk{Zeichenanleitung} für den Computer.
+	
+	Jeder einzelne \lk{Pixel} besteht aus \lk{drei} \lk{Subpixeln}. Die Helligkeit eines \lk{Subpixels} kann in 256 Stufen eingestellt werden. Hierbei ist der Wert 0 die geringste Helligkeit (also aus) und 255 die höchste Helligkeit. Die Subpixel haben die Farben \lk{Rot}, \lk{Grün} und \lk{Blau}. Mit diesen drei Farben kann ein Computer über \lk{16} \lk{Millionen} Farben darstellen.
+
+\vspace{1cm}
+Das Video als Zusammenfassung findest du unter folgendem Link:
+
+\qrcode{https://youtu.be/iDr-c8dAfis}
+
+https://youtu.be/iDr-c8dAfis
+
+	\newpage
+	\aufgabe{Farbcodes}
+	Öffne die Seite \url{http://www.spectrumcolors.de/cor_rgb_demo.php} im Browser.
+	
+	Experimentiere mit den Farben. Ergänze die Farbcodes zu den einzelnen Farben.
+	
+	\begin{center}
+		\begin{table}[h]
+\begin{tabular}{|
+>{\columncolor[HTML]{FF0000}}l 
+>{\columncolor[HTML]{FF0000}}c |
+>{\columncolor[HTML]{00FF00}}l 
+>{\columncolor[HTML]{00FF00}}c |
+>{\columncolor[HTML]{0000FF}}l 
+>{\columncolor[HTML]{0000FF}}c |
+>{\columncolor[HTML]{FFFFFF}}l 
+>{\columncolor[HTML]{FFFFFF}}c |
+>{\columncolor[HTML]{000000}}l 
+>{\columncolor[HTML]{000000}}c |}
+\hline
+{\ul } Rot: & 255 & Rot: & \lk{255} & \textcolor{white}{Rot:} & \lk{255} & Rot: & \lk{255} & \textcolor{white}{Rot:} & \lk{255}\\ 
+Grün: & \lk{255} & Grün: & 255 & \textcolor{white}{Grün:} & \lk{255} & Grün: & \lk{255} & \textcolor{white}{Grün:} & \textcolor{white}{255}\\
+Blau: & \lk{255} & Blau: & \lk{255} & \textcolor{white}{Blau:} & \textcolor{white}{255} & Blau: & 0 & \textcolor{white}{Blau:} & \lk{255}\\\hline
+\end{tabular}
+\begin{tabular}{|
+>{\columncolor[HTML]{FFFF00}}l 
+>{\columncolor[HTML]{FFFF00}}c |
+>{\columncolor[HTML]{FF00FF}}l 
+>{\columncolor[HTML]{FF00FF}}c |
+>{\columncolor[HTML]{00FFFF}}l 
+>{\columncolor[HTML]{00FFFF}}c |}
+\hline
+{\ul } Rot: & 255 & Rot: & \lk{255}  & Rot: & \lk{255}\\ 
+Grün: & \lk{255} & Grün: & 0 &Grün: & \lk{255}\\
+Blau: & \lk{255} & Blau: & \lk{255} & Blau: & 255\\\hline
+\end{tabular}
+\end{table}
+	\end{center}
+\end{LKtext}
+
+Diese Art und Weise Farben zu mischen, nennt man auch Additive Farbmischung.
+
+%\matheaufgaben{8}{-}
+
+%\input{%Pfad zur Datei "Erwartungsbild.tex%}
+\label{LastPage}
+\normalsize
+\ifthenelse{\equal{\TYP}{Klassenarbeit}}{
+\input{\patha/Erwartungsbild.tex}}
+{}
+\ifthenelse{\equal{\TYP}{Leistungskontrolle}}{
+\input{\patha/Erwartungsbild.tex}}
+{}
+
+
+\end{document}
