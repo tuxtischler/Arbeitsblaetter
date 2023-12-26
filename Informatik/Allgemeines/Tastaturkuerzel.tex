@@ -1,0 +1,73 @@
+\documentclass[a4paper, 12pt]{article}
+
+\def \patha {} %Pfad zu den Dateien Preamble.tex, Commands.tex, Erwartungsbild.tex
+
+\input{\patha/Preamble.tex}
+
+\onehalfspacing
+
+\newcommand{\KopfzeileBlank}{true}
+\newcommand{\FACH}{Informatik}
+\newcommand{\KLASSE}{}
+\newcommand{\DATUM}{XX.YY.ZZZZ}
+%% Über den jeweiligen Typ wird bei Klassenarbeit und Leistungskontrolle das Erwartungsbild und der Notenspiegel als anhängende Seite kompiliert. Der Befehl \aufgabe besitzt beim Typ Arbeitsblatt einen Parameter für die Aufgabenstellung. Bei den Typen Klassenarbeit und Leistungskontrolle kommen noch zwei weitere Parameter für die Punktzahl und das Erwartungsbild hinzu.
+\newcommand{\TYP}{Arbeitsblatt}
+%\newcommand{\TYP}{Klassenarbeit}
+%\newcommand{\TYP}{Leistungskontrolle}
+\newcommand{\EINHEIT}{}
+\newcommand{\THEMA}{Wichtige Tastaturkürzel}
+\newcommand{\LEHRER}{N.N.}
+\newcommand{\TIME}{Zeit}
+\newcommand{\NTA}{Hier ist Platz für Nachteilsausgleiche!}
+%% Dieser "Switch" bewirkt, dass für Lückentexte die Lösung angezeigt oder ausgeblendet wird. Aktuell werden die Lücken jedoch noch nicht berücksichtigt. Vielleicht gibt es auch eine bessere Lösung für diesen "Switch"...
+%\newcommand{\LOSUNG}{true}
+\newcommand{\LOSUNG}{false}
+
+%\input{%Pfad zur Datei "Commands.tex%}
+\input{\patha/Commands.tex}
+
+\ihead{\FACH\ \KLASSE}
+\chead{}
+\ohead{Name: \rule[0ex]{3cm}{1pt}\\}
+
+\begin{document}
+
+\large
+\TITEL
+
+\centering
+\begin{tabular}{|p{4cm}|p{12cm}|}
+	\hline
+	Tastenkombination & Funktion \\\hline
+	\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+	\rule{0pt}{1cm} &\\\hline
+
+\end{tabular}
+%\input{%Pfad zur Datei "Erwartungsbild.tex%}
+\label{LastPage}
+\normalsize
+\ifthenelse{\equal{\TYP}{Klassenarbeit}}{
+\input{\patha/Erwartungsbild.tex}}
+{}
+\ifthenelse{\equal{\TYP}{Leistungskontrolle}}{
+\input{\patha/Erwartungsbild.tex}}
+{}
+
+
+\end{document}

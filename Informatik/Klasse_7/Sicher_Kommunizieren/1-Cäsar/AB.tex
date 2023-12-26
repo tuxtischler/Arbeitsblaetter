@@ -1,0 +1,105 @@
+\documentclass[a4paper, 12pt]{article}
+
+\def \patha {/Users/timotischler/Documents/GitHub/Latex-Arbeitsblaetter} %Pfad zu den Dateien Preamble.tex, Commands.tex, Erwartungsbild.tex
+
+\input{\patha/Preamble.tex}
+
+\onehalfspacing
+
+\newcommand{\KopfzeileBlank}{true}
+\newcommand{\FACH}{Informatik}
+\newcommand{\KLASSE}{7}
+\newcommand{\DATUM}{XX.YY.ZZZZ}
+%% Über den jeweiligen Typ wird bei Klassenarbeit und Leistungskontrolle das Erwartungsbild und der Notenspiegel als anhängende Seite kompiliert. Der Befehl \aufgabe besitzt beim Typ Arbeitsblatt einen Parameter für die Aufgabenstellung. Bei den Typen Klassenarbeit und Leistungskontrolle kommen noch zwei weitere Parameter für die Punktzahl und das Erwartungsbild hinzu.
+\newcommand{\TYP}{Arbeitsblatt}
+%\newcommand{\TYP}{Klassenarbeit}
+%\newcommand{\TYP}{Leistungskontrolle}
+\newcommand{\EINHEIT}{Sicher kommunizieren}
+\newcommand{\THEMA}{Verschlüsselung}
+\newcommand{\LEHRER}{N.N.}
+\newcommand{\TIME}{Zeit}
+\newcommand{\NTA}{}
+%% Dieser "Switch" bewirkt, dass für Lückentexte die Lösung angezeigt oder ausgeblendet wird. Aktuell werden die Lücken jedoch noch nicht berücksichtigt. Vielleicht gibt es auch eine bessere Lösung für diesen "Switch"...
+%\newcommand{\LOSUNG}{true}
+\newcommand{\LOSUNG}{false}
+
+%\input{%Pfad zur Datei "Commands.tex%}
+\input{\patha/Commands.tex}
+
+\begin{document}
+
+\large
+\TITEL
+
+\aufgabe{Verschlüsselung im alten Rom}
+Schon Cäsar hat im antiken Rom seine Kommunikation verschlüsselt. Hierzu wurde immer der Buchstabe des Klartextes um 3 Buchstaben im Alphabet verschoben. Aus einem \glqq A\grqq{} wurde so ein \glqq D\grqq , aus jedem \glqq B\grqq\ ein \glqq E\grqq\ und so weiter. Den Schlüssel nennt man dabei \glqq D\grqq . Folgende Nachricht hat Cäsar damals an seine Truppen im Norden geschickt:
+\begin{center}
+	EULQJW PLU DVWHULA
+\end{center}
+Entschlüssle den Text, um zu erfahren, was Cäsar geplant hatte.
+\begin{large}
+	\begin{center}
+	\begin{tabular}{|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|p{12pt}|}
+	\hline
+	E&U&L&Q&J&W&&P&L&U&&D&V&W&H&U&L&A\\\hline
+	&&&&&&&&&&&&&&&&&\\\hline
+\end{tabular}
+\end{center}
+\end{large}
+
+
+\aufgabe{Das Verschiebeverfahren}
+Das Verschlüsselungsverfahren von Cäsar basiert auf dem \glqq Verschiebeverfahren\grqq{}. Bei diesem Verfahren werden alle Buchstaben im Klartext um eine bestimmte Anzahl an Buchstaben verschoben.
+
+Der Schlüssel beim Verschiebeverfahren ist der Buchstabe, zu dem das \glqq A\grqq{} wird. Verschlüssle deinen vollständigen Namen mit dem Schlüssel \glqq P\grqq{} und notiere den Geheimtext.
+\\
+\\
+Klartext:\vspace{1pt}\hrule
+
+\vspace{1cm}
+
+Geheimtext:\vspace{1pt}\hrule
+\newpage
+
+\aufgabe{Verschlüsselung unter Freunden}
+Vereinbare mit deinem:r Nachbar:in einen Schlüssel für eure Verschlüsselung. Schreibt euch nun geheime Nachrichten und nennt euch verschlüsselt eure Lieblingsfarbe, euer Lieblingstier und euer Lieblingsfach.
+
+Notiert euren Schlüssel und eure Geheimtexte und Klartexte.
+
+\vspace{0.5cm}
+
+Euer Schlüssel:\vspace{1pt}\hrule
+
+\vspace{1cm}
+\begin{center}
+\begin{tabular}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+	\vspace{0.3cm}& Dein Klartext & Dein Geheimtext \\\hline
+	\vspace{0.3cm}Lieblingsfarbe & & \\\hline
+	\vspace{0.3cm}Lieblingstier & & \\\hline
+	\vspace{0.3cm}Lieblingsfach & & \\\hline
+\end{tabular}
+
+\vspace{1cm}
+
+\begin{tabular}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+	\vspace{0.3cm}& Fremder Geheimtext & Fremder Klartext \\\hline
+	\vspace{0.3cm}Lieblingsfarbe & & \\\hline
+	\vspace{0.3cm}Lieblingstier & & \\\hline
+	\vspace{0.3cm}Lieblingsfach & & \\\hline
+\end{tabular}
+\end{center}
+
+%\input{%Pfad zur Datei "Erwartungsbild.tex%}
+\label{LastPage}
+\normalsize
+\ifthenelse{\equal{\TYP}{Klassenarbeit}}{
+\input{\patha/Erwartungsbild.tex}}
+{}
+\ifthenelse{\equal{\TYP}{Leistungskontrolle}}{
+\input{\patha/Erwartungsbild.tex}}
+{}
+
+
+\end{document}
