@@ -1,0 +1,94 @@
+\documentclass[a4paper, 12pt]{article}
+
+\def \patha {} %Pfad zu den Dateien Preamble.tex, Commands.tex, Erwartungsbild.tex
+
+\input{\patha/Preamble.tex}
+
+\onehalfspacing
+
+\newcommand{\KopfzeileBlank}{true}
+\newcommand{\FACH}{Informatik}
+\newcommand{\KLASSE}{Kl. 8}
+\newcommand{\DATUM}{XX.YY.ZZZZ}
+%% Über den jeweiligen Typ wird bei Klassenarbeit und Leistungskontrolle das Erwartungsbild und der Notenspiegel als anhängende Seite kompiliert. Der Befehl \aufgabe besitzt beim Typ Arbeitsblatt einen Parameter für die Aufgabenstellung. Bei den Typen Klassenarbeit und Leistungskontrolle kommen noch zwei weitere Parameter für die Punktzahl und das Erwartungsbild hinzu.
+\newcommand{\TYP}{Arbeitsblatt}
+%\newcommand{\TYP}{Klassenarbeit}
+%\newcommand{\TYP}{Leistungskontrolle}
+\newcommand{\EINHEIT}{Daten automatisiert auswerten}
+\newcommand{\THEMA}{Eine Klassenparty planen}
+\newcommand{\LEHRER}{N.N.}
+\newcommand{\TIME}{Zeit}
+\newcommand{\NTA}{Hier ist Platz für Nachteilsausgleiche!}
+%% Dieser "Switch" bewirkt, dass für Lückentexte die Lösung angezeigt oder ausgeblendet wird. Aktuell werden die Lücken jedoch noch nicht berücksichtigt. Vielleicht gibt es auch eine bessere Lösung für diesen "Switch"...
+%\newcommand{\LOSUNG}{true}
+\newcommand{\LOSUNG}{false}
+
+%\input{%Pfad zur Datei "Commands.tex%}
+\input{\patha/Commands.tex}
+
+\begin{document}
+
+\large
+\TITEL
+\textbf{1.}\ Starte das Programm LibreOffice. Klicke in LibreOffice auf \texttt{"Calc Tabellendokument"} um eine neue Tabelle zu erstellen.\\
+
+\textbf{2.}\ Speichere die Tabelle über das Menü $\rightarrow$ \texttt{Datei} $\rightarrow$ \texttt{Speichern} in deinem Informatik-Ordner. Wähle als Dateinamen \texttt{Klassenparty}\\
+
+\textbf{3.}\ Trage in die erste Zeile die Beschriftung der Spalten ein. (Produkt - Anzahl - Einzelpreis - Gesamtpreis)\\
+
+\textbf{4.}\ Trage jetzt die Produkte, die jeweilige Anzahl und den Einzelpreis in die Spalten A, B und C ein.\\
+
+\textbf{5.}\ \textbf{Berechne} in der Spalte D automatisiert die Gesamtpreise.\\
+
+\textbf{6.}\ Formatiere die Spalten C und D als "Währung".\\
+
+\textbf{7.}\ Trage in der letzten Zeile in der ersten Spalte \textbf{"Gesamtkosten"} ein. Berechne mittels der Funktion \texttt{SUMME()} den Gesamtpreis in der Spalte D.\\
+
+\textbf{8.}\ Trage unter der Zelle mit "Gesamtpreis" in der ersten Spalte \textbf{"Kosten pro Person"} ein. Berechne in der Spalte D die Kosten pro Schüler.\\
+
+\textbf{9.}\ Gestalte die Tabelle, indem du den Text in wichtigen Zeilen und Spalten passend formatierst.
+
+\textbf{Möglichkeiten zur Formatierung:}
+
+Schriftstil des Textes (z.B. \textbf{fett}, \textit{kurisv}, \underline{unterstrichen})
+
+Text oder Texthintergrund farbig gestalten
+
+Ausrichtung des Textes (links-, oder rechtsbündig, oben oder unten, zentriert)
+
+Ränder zwischen den Zellen
+
+\newpage
+
+Tabelle für vergessene Hausaufgaben
+\begin{table}[hbt]
+  \centering
+  \Large
+  \begin{tabular}{l|c|r|r}
+   Produkt & Anzahl & Einzelpreis & Gesamtpreis \\
+    \hline
+    Cola - 1l & 12 & 1,29 \euro{} & 15,48 \euro{}\\
+    Orangenlimonade - 1l & 6 & 1,19 \euro{} & 7,14 \euro{}\\
+    Wasser - 1l & 10 & 0,002 \euro{} & 0,02 \euro{}\\\hline
+    Gummibärchen - 175g & 4 & 0,99 \euro{} & 3,96 \euro{}\\
+    Chips - 150g & 6 & 1,99 \euro{} & 11,94 \euro{}\\\hline
+    Hot Dogs - 32 Stück & 2 & 29,99 \euro{} & 59,98 \euro{}\\
+    Mini-Pizzen - 9 Stück & 6 & 3,49 \euro{} & 20,94 \euro{}\\\hline
+    \textbf{Summe} & & &119,46 \euro{}
+  \end{tabular}
+\end{table}
+
+
+
+%\input{%Pfad zur Datei "Erwartungsbild.tex%}
+\label{LastPage}
+\normalsize
+\ifthenelse{\equal{\TYP}{Klassenarbeit}}{
+\input{\patha/Erwartungsbild.tex}}
+{}
+\ifthenelse{\equal{\TYP}{Leistungskontrolle}}{
+\input{\patha/Erwartungsbild.tex}}
+{}
+
+
+\end{document}
